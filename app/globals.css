@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* FIX SHADCN ACCORDION CLIPPING ISSUE */
+[data-state="open"] > div {
+  overflow: visible !important;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

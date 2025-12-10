@@ -1,16 +1,24 @@
-import type { ReactNode } from "react";
 import "./globals.css";
+import Navbar from "@/components/site/Navbar";
+import Footer from "@/components/site/Footer";
 
-interface LayoutProps {
-  children: ReactNode;
-}
-
-const RootLayout = ({ children }: LayoutProps) => {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
+export const metadata = {
+  title: "Endev Systems",
+  description: "Engineering & Technology Solutions",
 };
 
-export default RootLayout;
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>
+        <Navbar /> {/* ALWAYS rendered */}
+        {children} {/* The page */}
+        <Footer /> {/* ALWAYS rendered */}
+      </body>
+    </html>
+  );
+}

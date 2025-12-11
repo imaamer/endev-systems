@@ -1,10 +1,107 @@
+"use client";
+
+import {
+  Facebook,
+  Twitter,
+  Linkedin,
+  Youtube,
+  Download,
+  Check,
+} from "lucide-react";
+import QuickLinks from "./QuickLinks";
+
 export default function Footer() {
-    return (
-      <footer className="bg-gray-900 text-white py-10 mt-20">
-        <div className="max-w-7xl mx-auto px-6 text-center text-sm opacity-75">
-          © {new Date().getFullYear()} Endev Systems — All rights reserved.
+  return (
+    <footer className="bg-[#1A1A1D] text-gray-200 py-16">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-4 md:grid-cols-2 gap-12">
+        {/* ABOUT SECTION */}
+        <div>
+          <h3 className="text-lg font-bold mb-4 tracking-wide">ABOUT US</h3>
+          <p className="text-gray-400 leading-relaxed">
+            Qmax Systems is an Electronics Engineering and R&D Services company
+            based in San Jose, California with a development center in India.
+            Established in 1997, Qmax provides Embedded Systems Design and PCB
+            Design Services.
+          </p>
+
+          <p className="mt-4 text-gray-400 leading-relaxed">
+            Qmax has a highly experienced, multi-disciplinary team that can
+            bring out the best solutions for your requirement in the shortest
+            time. Our stringent process and hands-on experience help avoid
+            errors, reduce design costs and ensure faster time to market.
+          </p>
         </div>
-      </footer>
-    );
-  }
-  
+
+        {/* QUICK LINKS */}
+        <QuickLinks />
+
+        {/* PRESENTATION */}
+        <div>
+          <h3 className="text-lg font-bold mb-4 tracking-wide">PRESENTATION</h3>
+          <p className="text-gray-400 mb-4">
+            Click here to download our company presentation.
+          </p>
+
+          <button className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-md font-medium transition">
+            <Download size={18} /> Download
+          </button>
+
+          {/* SOCIALS */}
+          <h3 className="text-lg font-bold mt-8 mb-4 tracking-wide">
+            FOLLOW US
+          </h3>
+
+          <div className="flex items-center gap-4">
+            <Facebook className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-red-600 transition cursor-pointer" />
+            <Twitter className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-red-600 transition cursor-pointer" />
+            <Linkedin className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-red-600 transition cursor-pointer" />
+            <Youtube className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-red-600 transition cursor-pointer" />
+          </div>
+        </div>
+
+        {/* CONTACT SECTION */}
+        <div>
+          <h3 className="text-lg font-bold mb-4 tracking-wide">CONTACT US</h3>
+
+          {/* UNITED STATES */}
+          <div className="mb-6">
+            <div className="bg-red-600 text-white px-4 py-2 font-semibold rounded-t-md">
+              United States
+            </div>
+            <div className="bg-[#252528] p-4 rounded-b-md text-gray-300 leading-relaxed">
+              <p>Qmax Systems LLC</p>
+              <p>14105, Willow Tank Drive</p>
+              <p>Austin, TX 78717</p>
+              <p>United States</p>
+              <p className="mt-2">+1 412 265 2314</p>
+              <p className="text-red-400">info@qmaxsys.com</p>
+            </div>
+          </div>
+
+          {/* INDIA */}
+          <div>
+            <div className="bg-red-600 text-white px-4 py-2 font-semibold rounded-t-md">
+              India
+            </div>
+            <div className="bg-[#252528] p-4 rounded-b-md text-gray-300 leading-relaxed">
+              <p>Qmax Systems India Pvt Ltd</p>
+              <p>
+                310/2A, Rukmani Nagar, 4th Street,
+                <br />
+                Poonamallee, Chennai 600056,
+              </p>
+              <p>Tamil Nadu, India</p>
+              <p className="mt-2">+91 93840 230903</p>
+              <p className="text-red-400">info@qmaxsys.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* FOOTER BOTTOM LINE */}
+      <div className="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500 text-sm">
+        © {new Date().getFullYear()} EndevSystems. All Rights Reserved.
+      </div>
+    </footer>
+  );
+}

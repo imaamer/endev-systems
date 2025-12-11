@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -50,8 +51,15 @@ export default function Navbar() {
     <header className="border-b bg-white/80 backdrop-blur-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-semibold">
-          Endev Systems
+        <Link href="/" className="flex items-center h-full">
+          <Image
+            src="/images/logo.jpg" // <-- put your logo here
+            alt="Endev Systems Logo"
+            width={150}
+            height={50}
+            className="object-contain"
+            priority
+          />
         </Link>
 
         {/* NAVIGATION */}

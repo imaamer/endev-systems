@@ -1,49 +1,96 @@
-import PageHeader from "./../../components/site/PageHeader";
+/* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
+
+type CaseStudy = {
+  title: string;
+  image: string;
+  href: string;
+};
+
+const caseStudies: CaseStudy[] = [
+  {
+    title: "Security System Controller",
+    image: "/images/case-images/case1.jpg",
+    href: "/case-studies/security-system-controller",
+  },
+  {
+    title: "Structural Health Monitoring System",
+    image: "/images/case-images/case2.jpg",
+    href: "/case-studies/structural-health-monitoring",
+  },
+  {
+    title: "Control System with POE Switch",
+    image: "/images/case-images/case3.jpg",
+    href: "/case-studies/control-system-poe",
+  },
+  {
+    title: "Lithium Titanate Power Bank",
+    image: "/images/case-images/case1.jpg",
+    href: "/case-studies/lithium-power-bank",
+  },
+  {
+    title: "OBD II Device with LoRa & BLE",
+    image: "/images/case-images/case2.jpg",
+    href: "/case-studies/obd-lora-ble",
+  },
+  {
+    title: "BLE Tag with Wireless Charging",
+    image: "/images/case-images/case3.jpg",
+    href: "/case-studies/ble-wireless-charging",
+  },
+  {
+    title: "IoT Module with Wi-Fi / BLE / ZigBee",
+    image: "/images/case-images/case2.jpg",
+    href: "/case-studies/iot-module",
+  },
+  {
+    title: "IoT Micro Gateway",
+    image: "/images/case-images/case2.jpg",
+    href: "/case-studies/iot-gateway",
+  },
+];
 
 export default function CaseStudiesPage() {
   return (
-    <div>
-      <PageHeader
-        title="Our Case Studies"
-        subtitle="Engineering solutions tailored for modern product development."
-      />
+    <section className="py-20">
+      <div className="max-w-7xl mx-auto px-6">
+        <h1 className="text-4xl font-bold text-center mb-12">Case Studies</h1>
 
-      <div className="max-w-5xl mx-auto px-6 py-16 space-y-12">
-        <section>
-          <h2 className="text-2xl font-semibold mb-2">Embedded Engineering</h2>
-          <p className="text-gray-700">
-            Firmware development, real-time systems, microcontroller
-            programming, IoT device engineering, communication protocols, and
-            industrial electronics.
-          </p>
-        </section>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {caseStudies.map((item, index) => (
+            <Link
+              key={index}
+              href={item.href}
+              className="block rounded-xl overflow-hidden shadow-lg"
+            >
+              <div className="group relative h-56">
+                {/* IMAGE */}
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="
+                  block
+                  h-full w-full object-cover
+                  transition-transform duration-700 ease-out
+                  group-hover:scale-110
+                  z-0
+                "
+                />
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-2">PCB Design</h2>
-          <p className="text-gray-700">
-            High-speed, multi-layer PCB design optimized for manufacturability,
-            signal integrity, thermal performance, and EMC compliance.
-          </p>
-        </section>
+                {/* OVERLAY (SAFE) */}
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-2">Product Engineering</h2>
-          <p className="text-gray-700">
-            Complete electronic product design from concept to prototype,
-            including hardware, firmware, enclosure coordination, and production
-            readiness.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-semibold mb-2">Testing & Validation</h2>
-          <p className="text-gray-700">
-            Functional testing, stress validation, regulatory certification
-            support (CE, FCC, UL), protocol debugging, and automated reliability
-            measurements.
-          </p>
-        </section>
+                {/* TEXT */}
+                <div className="pointer-events-none absolute inset-0 flex items-end p-4 z-20">
+                  <h3 className="text-white text-sm font-semibold drop-shadow">
+                    {item.title}
+                  </h3>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

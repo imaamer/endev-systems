@@ -3,19 +3,23 @@
 import { motion } from "framer-motion";
 import { Award, Zap, Layers, Cpu, Settings, Clock } from "lucide-react";
 
-const col1 = [
-  { title: "25+ years of hands on experience", icon: Award },
-  { title: "Cross Domain Expertise", icon: Layers },
-];
+type EdgeItem = {
+  title: string;
+  icon: React.ElementType;
+  from: "left" | "right" | "bottom";
+};
 
-const col2 = [
-  { title: "Fast & Cost Effective Solutions", icon: Zap },
-  { title: "Concept to Manufacturing", icon: Settings },
-];
-
-const col3 = [
-  { title: "FPGA Design Expertise", icon: Cpu },
-  { title: "24x7 Design Support", icon: Clock },
+const rows: EdgeItem[][] = [
+  [
+    { title: "25+ years of hands on experience", icon: Award, from: "left" },
+    { title: "Fast & Cost Effective Solutions", icon: Zap, from: "bottom" },
+    { title: "FPGA Design Expertise", icon: Cpu, from: "right" },
+  ],
+  [
+    { title: "Cross Domain Expertise", icon: Layers, from: "left" },
+    { title: "Concept to Manufacturing", icon: Settings, from: "bottom" },
+    { title: "24x7 Design Support", icon: Clock, from: "right" },
+  ],
 ];
 
 export default function EndevSystemEdge() {
@@ -28,93 +32,48 @@ export default function EndevSystemEdge() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold mb-16"
+          className="text-4xl font-bold mb-20"
         >
           EndevSystem <span className="text-red-600">Edge</span>
         </motion.h2>
 
-        {/* 3 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
-          {/* COLUMN 1 */}
-          <div className="space-y-24">
-            {col1.map((item, i) => {
-              const Icon = item.icon;
-              return (
+        {/* GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-20 gap-y-24">
+          {rows.flat().map((item, i) => {
+            const Icon = item.icon;
+
+            const initial =
+              item.from === "left"
+                ? { x: -40, opacity: 0 }
+                : item.from === "right"
+                ? { x: 40, opacity: 0 }
+                : { y: 40, opacity: 0 };
+
+            return (
+              <motion.div
+                key={i}
+                initial={initial}
+                whileInView={{ x: 0, y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
+                viewport={{ once: true }}
+                className="flex items-center space-x-4 justify-center md:justify-start"
+              >
+                {/* ICON */}
                 <motion.div
-                  key={i}
-                  className="flex items-center space-x-4"
-                  initial={{ opacity: 0, x: -40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: i * 0.2 }}
-                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.12 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="bg-red-600 text-white w-16 h-16 rounded-xl shadow-lg flex items-center justify-center"
                 >
-                  <motion.div
-                    whileHover={{ scale: 1.12 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className="bg-red-600 text-white p-4 rounded-xl shadow-lg w-16 h-16 flex items-center justify-center"
-                  >
-                    <Icon size={32} />
-                  </motion.div>
-
-                  <p className="text-xl font-medium text-black">{item.title}</p>
+                  <Icon size={32} />
                 </motion.div>
-              );
-            })}
-          </div>
 
-          {/* COLUMN 2 */}
-          <div className="space-y-44">
-            {col2.map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={i}
-                  className="flex items-center space-x-4"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: i * 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.12 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className="bg-red-600 text-white p-4 rounded-xl shadow-lg w-16 h-16 flex items-center justify-center"
-                  >
-                    <Icon size={32} />
-                  </motion.div>
-
-                  <p className="text-xl font-medium text-black">{item.title}</p>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* COLUMN 3 */}
-          <div className="space-y-24">
-            {col3.map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={i}
-                  className="flex items-center space-x-4"
-                  initial={{ opacity: 0, x: 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: i * 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.12 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className="bg-red-600 text-white p-4 rounded-xl shadow-lg w-16 h-16 flex items-center justify-center"
-                  >
-                    <Icon size={32} />
-                  </motion.div>
-
-                  <p className="text-xl font-medium text-black">{item.title}</p>
-                </motion.div>
-              );
-            })}
-          </div>
+                {/* TEXT */}
+                <p className="text-xl font-medium text-black text-left max-w-xs">
+                  {item.title}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

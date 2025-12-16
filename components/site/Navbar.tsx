@@ -53,7 +53,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center h-full">
           <Image
-            src="/images/logo.jpg" // <-- put your logo here
+            src="/images/logo.png" // <-- put your logo here
             alt="Endev Systems Logo"
             width={150}
             height={50}

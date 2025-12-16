@@ -1,12 +1,11 @@
 "use client";
 
 import {
-  Facebook,
-  Twitter,
-  Linkedin,
-  Youtube,
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon,
+  YoutubeIcon,
   Download,
-  Check,
 } from "lucide-react";
 import QuickLinks from "./QuickLinks";
 
@@ -52,10 +51,10 @@ export default function Footer() {
           </h3>
 
           <div className="flex items-center gap-4">
-            <Facebook className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-red-600 transition cursor-pointer" />
-            <Twitter className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-red-600 transition cursor-pointer" />
-            <Linkedin className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-red-600 transition cursor-pointer" />
-            <Youtube className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-red-600 transition cursor-pointer" />
+            <FacebookIcon className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-red-600 transition cursor-pointer" />
+            <TwitterIcon className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-red-600 transition cursor-pointer" />
+            <LinkedinIcon className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-red-600 transition cursor-pointer" />
+            <YoutubeIcon className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-red-600 transition cursor-pointer" />
           </div>
         </div>
 
@@ -63,36 +62,18 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-bold mb-4 tracking-wide">CONTACT US</h3>
 
-          {/* UNITED STATES */}
+          {/* Pakistan */}
           <div className="mb-6">
             <div className="bg-red-600 text-white px-4 py-2 font-semibold rounded-t-md">
-              United States
+              Pakistan
             </div>
             <div className="bg-[#252528] p-4 rounded-b-md text-gray-300 leading-relaxed">
-              <p>Qmax Systems LLC</p>
-              <p>14105, Willow Tank Drive</p>
-              <p>Austin, TX 78717</p>
-              <p>United States</p>
-              <p className="mt-2">+1 412 265 2314</p>
-              <p className="text-red-400">info@qmaxsys.com</p>
-            </div>
-          </div>
-
-          {/* INDIA */}
-          <div>
-            <div className="bg-red-600 text-white px-4 py-2 font-semibold rounded-t-md">
-              India
-            </div>
-            <div className="bg-[#252528] p-4 rounded-b-md text-gray-300 leading-relaxed">
-              <p>Qmax Systems India Pvt Ltd</p>
-              <p>
-                310/2A, Rukmani Nagar, 4th Street,
-                <br />
-                Poonamallee, Chennai 600056,
-              </p>
-              <p>Tamil Nadu, India</p>
-              <p className="mt-2">+91 93840 230903</p>
-              <p className="text-red-400">info@qmaxsys.com</p>
+              <p>EndevSystems (SMC Pvt) Ltd.</p>
+              <p>208 Global Heights</p>
+              <p>Abdul Haq Road, Opp Exp Center</p>
+              <p>Lahore, Pakistan</p>
+              <p className="mt-2">+92 3164100201</p>
+              <p className="text-red-400">info@endevsystems.com</p>
             </div>
           </div>
         </div>

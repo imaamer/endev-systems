@@ -53,7 +53,7 @@ export default function ServicesGrid() {
                 <div className="mt-4 pt-3">
                   <span
                     className="
-                      text-red-600 font-medium text-sm 
+                      text-[#3ac6c5] font-medium text-sm 
                       inline-flex items-center gap-1 
                       group-hover:underline 
                       transition-all 

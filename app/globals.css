@@ -6,6 +6,43 @@
   overflow: visible !important;
 }
 
+/* ===============================
+   Concept → Manufacturing arrows
+   ALL arrows point RIGHT
+   =============================== */
+
+.arrow-anchor {
+  position: relative;
+  overflow: visible;
+}
+
+/* Core arrow shape */
+.arrow-step {
+  min-width: 200px;
+  height: 120px;
+  padding: 1rem 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%, 0% 100%, 8% 50%);
+}
+
+/* overlap arrows slightly */
+.arrow-step:not(:first-child) {
+  margin-left: -26px;
+}
+
+/* stacking fix */
+.arrow-step {
+  z-index: 1;
+}
+.arrow-step:hover {
+  z-index: 10;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

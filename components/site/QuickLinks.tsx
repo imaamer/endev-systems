@@ -27,13 +27,13 @@ function QuickLinks() {
                 href={href}
                 className={`flex items-center gap-2 transition ${
                   isActive
-                    ? "text-red-500 font-semibold"
+                    ? "text-[#3ac6c5] font-semibold"
                     : "text-gray-300 hover:text-white"
                 }`}
               >
                 <Check
                   size={16}
-                  className={isActive ? "text-red-500" : "text-red-500/70"}
+                  className={isActive ? "text-[#3ac6c5]" : "text-[#3ac6c5]/70"}
                 />
                 {name}
               </Link>

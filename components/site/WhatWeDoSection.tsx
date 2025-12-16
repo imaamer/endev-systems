@@ -4,14 +4,20 @@ export default function WhatWeDoSection() {
       <div className="max-w-5xl mx-auto text-center px-6">
         {/* HEADING */}
         <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-          What <span className="text-red-600">We</span> Do
+          What <span className="text-[#3ac6c5]">We</span> Do
         </h2>
 
         {/* DESCRIPTION */}
         <p className="mt-6 text-gray-600 text-lg leading-relaxed">
-          Endev Systems provides High Quality Hardware Engineering and PCB
-          Design Services. We help turn your requirements into products with the
-          shortest lead time.
+          We design high-performance x86 Motherboards, FPGA-based platforms,
+          Data-Center Server and Networking Hardware Equipment. SBCs, SOMs,
+          Carrier Boards for Processors, FPGAs, ASICs and SOCs, with strong
+          attention to reliability, performance, and manufacturability. Our work
+          covers the complete development cycle, including Hardware Design,
+          Signal and Power integrity, Mechanical and Thermal optimization,
+          Firmware, Embedded software, and system integration. At Endev Systems,
+          we help companies turn challenging engineering ideas into
+          production-ready systems.
         </p>
       </div>
     </section>

@@ -50,7 +50,7 @@ export default function Footer() {
             Click here to download our company presentation.
           </p>
 
-          <button className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-md font-medium transition">
+          <button className="flex items-center gap-2 bg-[#3ac6c5] hover:bg-[#3ac6c5] text-white px-5 py-2 rounded-md font-medium transition">
             <Download size={18} /> Download
           </button>
 
@@ -73,7 +73,7 @@ export default function Footer() {
 
           {/* Pakistan */}
           <div className="mb-6">
-            <div className="bg-red-600 text-white px-4 py-2 font-semibold rounded-t-md">
+            <div className="bg-[#3ac6c5] text-white px-4 py-2 font-semibold rounded-t-md">
               Pakistan
             </div>
             <div className="bg-[#252528] p-4 rounded-b-md text-gray-300 leading-relaxed">
@@ -82,7 +82,7 @@ export default function Footer() {
               <p>Abdul Haq Road, Opp Exp Center</p>
               <p>Lahore, Pakistan</p>
               <p className="mt-2">+92 3164100201</p>
-              <p className="text-red-400">info@endevsystems.com</p>
+              <p className="text-[#3ac6c5]">info@endevsystems.com</p>
             </div>
           </div>
         </div>

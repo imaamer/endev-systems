@@ -8,7 +8,7 @@ import {
 
 export default function WhyChooseUs() {
   return (
-    <section className="w-full">
+    <section className=" py-20 w-full">
       {/* TOP HEADING */}
       <div className="text-center py-16 px-4">
         <h2 className="text-4xl md:text-5xl font-bold">

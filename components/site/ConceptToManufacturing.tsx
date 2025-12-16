@@ -141,7 +141,7 @@ export default function ConceptToManufacturing() {
 
                   {/* POPOVER */}
                   <HoverCardContent
-                    side="top"
+                    side="bottom"
                     align="center"
                     className="w-72 rounded-xl border bg-white shadow-xl"
                   >

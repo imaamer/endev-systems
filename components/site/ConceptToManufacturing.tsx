@@ -11,28 +11,96 @@ import {
 } from "lucide-react";
 
 import { motion } from "framer-motion";
+import {
+  HoverCard,
+  HoverCardTrigger,
+  HoverCardContent,
+} from "@/components/ui/hover-card";
 
 export default function ConceptToManufacturing() {
   const steps = [
-    { label: "Concept", color: "#FF6B6B", icon: Lightbulb },
-    { label: "Hardware", color: "#10C3A7", icon: Cpu },
-    { label: "PCB", color: "#4FA3B6", icon: CircuitBoard },
-    { label: "Software", color: "#B1842B", icon: Code },
-    { label: "ID", color: "#8D78E3", icon: Box },
-    { label: "NPI", color: "#D49A2A", icon: PackageSearch },
-    { label: "Manufacturing", color: "#88A946", icon: Factory },
+    {
+      label: "Concept",
+      items: [
+        "Concept Validation",
+        "MVP Specifications",
+        "System Architecture",
+      ],
+      color: "#FF6B6B",
+      icon: Lightbulb,
+    },
+    {
+      label: "Hardware",
+      items: [
+        "High Level Design",
+        "Low Level Design",
+        "Component Engineering",
+        "Board Bring Up",
+        "Testing",
+      ],
+      color: "#10C3A7",
+      icon: Cpu,
+    },
+    {
+      label: "PCB",
+      items: [
+        "PCB Layout Design",
+        "Signal / Power / Thermal Integrity",
+        "PCB Fabrication",
+        "PCB Assembly",
+      ],
+      color: "#4FA3B6",
+      icon: CircuitBoard,
+    },
+    {
+      label: "Software",
+      items: [
+        "Firmware Development",
+        "Driver & BSP Development",
+        "Linux / RTOS / Android / Web Apps",
+        "Cloud Application Development",
+      ],
+      color: "#B1842B",
+      icon: Code,
+    },
+    {
+      label: "ID",
+      items: [
+        "Enclosure Design",
+        "Mechanical Design",
+        "Proto Enclosure Fabrication",
+      ],
+      color: "#8D78E3",
+      icon: Box,
+    },
+    {
+      label: "NPI",
+      items: [
+        "Compliance Certification (FCC / UL / CE)",
+        "Vendor Audits",
+        "Test Jig Development",
+      ],
+      color: "#D49A2A",
+      icon: PackageSearch,
+    },
+    {
+      label: "Manufacturing",
+      items: ["Manufacturing Coordination", "Manufacturing Testing"],
+      color: "#88A946",
+      icon: Factory,
+    },
   ];
 
   return (
-    <section className="py-20 w-full">
-      <h2 className="text-center text-4xl md:text-5xl font-bold mb-12">
+    <section className="py-20 w-full bg-white">
+      <h2 className="text-center text-4xl md:text-5xl font-bold mb-16">
         Concept <span className="text-red-600">To</span> Manufacturing
       </h2>
 
       {/* Center Wrapper */}
       <div className="flex justify-center">
         <div className="relative flex items-center">
-          {/* Arrow body */}
+          {/* Arrow Body */}
           <motion.div
             initial={{ opacity: 0, x: -120 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -40,37 +108,62 @@ export default function ConceptToManufacturing() {
             viewport={{ once: true }}
             className="flex shadow-lg bg-gray-300 rounded-l-xl overflow-hidden"
           >
-            {steps.map((step, index) => {
+            {steps.map((step) => {
               const Icon = step.icon;
+
               return (
-                <motion.div
-                  key={step.label}
-                  whileHover={{ scale: 1.06 }}
-                  transition={{ type: "spring", stiffness: 220, damping: 12 }}
-                  className="flex flex-col items-center justify-center px-10 py-6 text-white font-semibold text-lg gap-2 cursor-pointer relative"
-                  style={{ backgroundColor: step.color }}
-                >
-                  {/* Icon */}
-                  <Icon className="w-7 h-7 opacity-90" />
+                <HoverCard key={step.label} openDelay={150}>
+                  <HoverCardTrigger asChild>
+                    <motion.div
+                      whileHover={{ scale: 1.06 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 220,
+                        damping: 12,
+                      }}
+                      className="relative flex flex-col items-center justify-center px-10 py-6 text-white font-semibold text-lg gap-2 cursor-pointer"
+                      style={{ backgroundColor: step.color }}
+                    >
+                      <Icon className="w-7 h-7 opacity-90" />
+                      <span className="tracking-wide">
+                        {step.label.toUpperCase()}
+                      </span>
 
-                  {/* Label */}
-                  <span className="tracking-wide">
-                    {step.label.toUpperCase()}
-                  </span>
+                      {/* Glow */}
+                      <motion.div
+                        className="absolute inset-0 pointer-events-none"
+                        whileHover={{
+                          boxShadow: `0 0 20px ${step.color}aa`,
+                        }}
+                      />
+                    </motion.div>
+                  </HoverCardTrigger>
 
-                  {/* Glow effect on hover */}
-                  <motion.div
-                    className="absolute inset-0 rounded-lg pointer-events-none"
-                    whileHover={{
-                      boxShadow: `0 0 18px ${step.color}aa`,
-                    }}
-                  />
-                </motion.div>
+                  {/* POPOVER */}
+                  <HoverCardContent
+                    side="top"
+                    align="center"
+                    className="w-72 rounded-xl border bg-white shadow-xl"
+                  >
+                    <h4 className="font-semibold text-base mb-3">
+                      {step.label}
+                    </h4>
+
+                    <ul className="space-y-2 text-sm text-gray-700">
+                      {step.items.map((item) => (
+                        <li key={item} className="flex items-start gap-2">
+                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-red-500" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </HoverCardContent>
+                </HoverCard>
               );
             })}
           </motion.div>
 
-          {/* Arrowhead */}
+          {/* Arrow Head */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}

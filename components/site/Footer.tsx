@@ -17,23 +17,32 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-bold mb-4 tracking-wide">ABOUT US</h3>
           <p className="text-gray-400 leading-relaxed">
-            Qmax Systems is an Electronics Engineering and R&D Services company
-            based in San Jose, California with a development center in India.
-            Established in 1997, Qmax provides Embedded Systems Design and PCB
-            Design Services.
+            EndevSystems is an Embedded Systems Engineering and R&D Services
+            company based in Delaware, United States with a development centre
+            in UAE and Pakistan. Established in 2005, EndevSystems focuses on
+            designing complex Embedded Systems for High Performance Computing
+            serving Defence , Automotive, Industrial, Medical and Consumer
+            Market. We are a team 60+ Engineers consisting of Embedded Hardware,
+            Electronics, Mechanical, Thermal, Firmware, and Software Engineers
+            delivering end-to-end product development—from concept to
+            production.
           </p>
 
-          <p className="mt-4 text-gray-400 leading-relaxed">
-            Qmax has a highly experienced, multi-disciplinary team that can
-            bring out the best solutions for your requirement in the shortest
-            time. Our stringent process and hands-on experience help avoid
-            errors, reduce design costs and ensure faster time to market.
-          </p>
+          {/* <p className="mt-4 text-gray-400 leading-relaxed">
+            We design high-performance x86 Motherboards, FPGA-based platforms,
+            Data-Center Server and Networking Hardware Equipment. SBCs, SOMs,
+            Carrier Boards for Processors, FPGAs, ASICs and SOCs, with strong
+            attention to reliability, performance, and manufacturability. Our
+            work covers the complete development cycle, including Hardware
+            Design, Signal and Power integrity, Mechanical and Thermal
+            optimization, Firmware, Embedded software, and system integration.
+            At Endev Systems, we help companies turn challenging engineering
+            ideas into production-ready systems.
+          </p> */}
         </div>
 
         {/* QUICK LINKS */}
         <QuickLinks />
-
         {/* PRESENTATION */}
         <div>
           <h3 className="text-lg font-bold mb-4 tracking-wide">PRESENTATION</h3>

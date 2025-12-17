@@ -24,7 +24,7 @@ const rows: EdgeItem[][] = [
 
 export default function EndevSystemEdge() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-15 bg-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Heading */}
         <motion.h2
@@ -38,7 +38,7 @@ export default function EndevSystemEdge() {
         </motion.h2>
 
         {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-20 gap-y-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-20 gap-y-14">
           {rows.flat().map((item, i) => {
             const Icon = item.icon;
 

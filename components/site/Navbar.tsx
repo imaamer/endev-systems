@@ -29,27 +29,10 @@ const servicesMenuItems: {
   },
 ];
 
-const caseStudiesMenuItems: {
-  title: string;
-  href: string;
-  description: string;
-}[] = [
-  {
-    title: "Embedded Systems",
-    href: "/case-studies/embedded-systems",
-    description: "Description of embedded systems",
-  },
-  {
-    title: "PCB Design",
-    href: "/case-studies/pcb-design",
-    description: "Description of PCB design",
-  },
-];
-
 export default function Navbar() {
   return (
     <header className="border-b bg-white/80 backdrop-blur-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto flex justify-between items-center h-16 px-6">
+      <div className="max-w-7xl mx-auto flex justify-between items-center h-22 px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center h-full">
           <Image
@@ -97,24 +80,13 @@ export default function Navbar() {
 
             {/* CASE STUDIES DROPDOWN */}
 
-            <NavigationMenuItem className="hidden md:block">
-              <NavigationMenuTrigger>Case Studies</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[300px] gap-4">
-                  <li>
-                    {caseStudiesMenuItems.map((component) => (
-                      <NavigationMenuLink asChild key={component.title}>
-                        <Link href={component.href}>
-                          <div className="font-medium">{component.title}</div>
-                          <div className="text-muted-foreground">
-                            {component.description}
-                          </div>
-                        </Link>
-                      </NavigationMenuLink>
-                    ))}
-                  </li>
-                </ul>
-              </NavigationMenuContent>
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                asChild
+                className={navigationMenuTriggerStyle()}
+              >
+                <Link href="/case-studies">Case Studies</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink

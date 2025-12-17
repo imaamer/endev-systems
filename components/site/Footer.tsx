@@ -60,10 +60,8 @@ export default function Footer() {
           </h3>
 
           <div className="flex items-center gap-4">
-            <FacebookIcon className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-red-600 transition cursor-pointer" />
-            <TwitterIcon className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-red-600 transition cursor-pointer" />
-            <LinkedinIcon className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-red-600 transition cursor-pointer" />
-            <YoutubeIcon className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-red-600 transition cursor-pointer" />
+            <LinkedinIcon className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-[#3ac6c5] transition cursor-pointer" />
+            <YoutubeIcon className="w-8 h-8 p-2 bg-gray-700 rounded-full hover:bg-[#3ac6c5] transition cursor-pointer" />
           </div>
         </div>
 

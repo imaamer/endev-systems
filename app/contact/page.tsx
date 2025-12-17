@@ -1,21 +1,17 @@
+import PageHeader from "@/components/site/PageHeader";
 import Image from "next/image";
 
 export default function ContactPage() {
   return (
-    <div className="w-full">
-      {/* FULL-WIDTH HEADING STRIP */}
-      <div className="w-full bg-[#0F1828] text-white py-8 px-6 shadow">
-        <h1 className="max-w-7xl mx-auto text-3xl md:text-4xl font-semibold tracking-tight">
-          Contact Us
-        </h1>
-      </div>
+    <div>
+      <PageHeader title="Contact Us" />
 
       {/* MAIN CONTENT */}
       <div className="max-w-7xl mx-auto px-6 py-16 space-y-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* LEFT: FORM */}
           <div className="space-y-8">
-            <h2 className="text-2xl font-semibold">Contact Form</h2>
+            <h2 className="text-2xl font-semibold">Enter Your Details</h2>
 
             <form className="space-y-4">
               <input
@@ -38,7 +34,7 @@ export default function ContactPage() {
                 rows={5}
                 className="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-500"
               />
-              <button className="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition">
+              <button className="bg-[#3ac6c5] text-white px-8 py-3 rounded-lg hover:bg-red-700 transition">
                 Send Message
               </button>
             </form>

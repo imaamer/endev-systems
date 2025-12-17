@@ -8,14 +8,14 @@ import {
 
 export default function WhyChooseUs() {
   return (
-    <section className=" py-20 w-full">
+    <section className=" py-0 w-full  bg-[#F3F4F6]">
       {/* TOP HEADING */}
       <div className="text-center py-16 px-4">
         <h2 className="text-4xl md:text-5xl font-bold">
           Why <span className="text-[#3ac6c5]">Choose</span> Us
         </h2>
 
-        <p className="max-w-4xl mx-auto mt-6 text-lg md:text-xl text-gray-600 leading-relaxed">
+        <p className="max-w-5xl mx-auto mt-6 text-lg md:text-xl text-gray-600 leading-relaxed">
           EndevSystems has over 20 years of experience in designing complex
           hardware for the most challenging applications.
         </p>
@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
           {/* ITEM 4 */}
           <div>
             <BatteryCharging className="w-12 h-12 mx-auto mb-4 opacity-90" />
-            <p className="text-4xl font-semibold text-[#3ac6c5]">200+</p>
+            <p className="text-4xl font-semibold text-[#3ac6c5]">25+</p>
             <div className="mx-auto mt-3 mb-3 w-40 border-t border-gray-600" />
             <p className="text-sm tracking-wide uppercase text-gray-400">
               Years Combined Experience

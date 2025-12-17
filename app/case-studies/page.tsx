@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import PageHeader from "@/components/site/PageHeader";
 import Link from "next/link";
 
 type CaseStudy = {
@@ -52,10 +53,12 @@ const caseStudies: CaseStudy[] = [
 
 export default function CaseStudiesPage() {
   return (
-    <section className="py-20">
-      <div className="max-w-7xl mx-auto px-6">
-        <h1 className="text-4xl font-bold text-center mb-12">Case Studies</h1>
-
+    <div>
+      <PageHeader
+        title="Case Studies"
+        subtitle="Engineering solutions tailored for modern product development."
+      />
+      <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {caseStudies.map((item, index) => (
             <Link
@@ -91,6 +94,6 @@ export default function CaseStudiesPage() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

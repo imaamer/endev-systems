@@ -8,7 +8,7 @@ export default function ServicesPage() {
         subtitle="Engineering solutions tailored for modern product development."
       />
 
-      <div className="max-w-5xl mx-auto px-6 py-16 space-y-12">
+      <div className="max-w-7xl mx-auto px-6 py-16 space-y-12">
         <section>
           <h2 className="text-2xl font-semibold mb-2">Embedded Engineering</h2>
           <p className="text-gray-700">

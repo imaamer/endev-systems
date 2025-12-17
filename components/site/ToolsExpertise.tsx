@@ -40,15 +40,15 @@ export default function ToolsExpertise() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-20 bg-[#F3F4F6]">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center mb-14">
+        <h2 className="text-center text-4xl md:text-5xl font-bold mb-10">
           Tools <span className="text-[#3ac6c5]">Expertise</span>
         </h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-10 justify-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-8 gap-10 justify-center">
           {tools.map((tool, index) => (
             <motion.div
               key={tool.name}
@@ -66,7 +66,7 @@ export default function ToolsExpertise() {
                 hover:shadow-xl
                 transition-all
                 duration-300
-                p-6
+                p-4
                 flex
                 flex-col
                 items-center
@@ -75,7 +75,7 @@ export default function ToolsExpertise() {
               "
             >
               {/* Icon */}
-              <div className="h-20 w-20 flex items-center justify-center mb-4">
+              <div className="h-10 w-20 flex items-center justify-center mb-4">
                 <img
                   src={tool.logo}
                   alt={tool.name}

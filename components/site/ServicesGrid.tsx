@@ -18,7 +18,9 @@ export default function ServicesGrid() {
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-10">Our Services</h2>
+        <h2 className="text-center text-4xl md:text-5xl font-bold mb-10">
+          Our <span className="text-[#3ac6c5]">Services</span>
+        </h2>
 
         <div className="flex justify-center gap-10 flex-wrap">
           {services.map((s) => (

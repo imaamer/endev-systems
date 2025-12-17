@@ -10,6 +10,11 @@
    Concept → Manufacturing arrows
    ALL arrows point RIGHT
    =============================== */
+:root {
+  --color-brand: #3ac6c5;
+  --color-brand-dark: #2fa9a8;
+  --color-brand-light: #6ad7d6;
+}
 
 .arrow-anchor {
   position: relative;

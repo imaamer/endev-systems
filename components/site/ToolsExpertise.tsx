@@ -44,7 +44,7 @@ export default function ToolsExpertise() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-10">
-          Tools <span className="text-[#3ac6c5]">Expertise</span>
+          Tools <span className="text-(--color-brand)">Expertise</span>
         </h2>
 
         {/* Grid */}

@@ -4,7 +4,7 @@ export default function WhatWeDoSection() {
       <div className="max-w-5xl mx-auto text-center px-6">
         {/* HEADING */}
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-10">
-          What <span className="text-[#3ac6c5]">We</span> Do
+          What <span className="text-(--color-brand)">We</span> Do
         </h2>
 
         {/* DESCRIPTION */}

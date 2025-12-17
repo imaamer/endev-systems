@@ -129,7 +129,7 @@ export default function Hero() {
               {/* CONTACT US BUTTON */}
               <a
                 href="/contact"
-                className="px-6 py-2 bg-[#3ac6c5] rounded-md hover:bg-[#3ac6c5] transition font-semibold"
+                className="px-6 py-2 bg-(--color-brand) rounded-md hover:bg-(--color-brand) transition font-semibold"
               >
                 Contact Us
               </a>

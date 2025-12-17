@@ -34,7 +34,7 @@ export default function EndevSystemEdge() {
           viewport={{ once: true }}
           className="text-4xl font-bold mb-20"
         >
-          EndevSystem <span className="text-[#3ac6c5]">Edge</span>
+          EndevSystem <span className="text-(--color-brand)">Edge</span>
         </motion.h2>
 
         {/* GRID */}
@@ -62,7 +62,7 @@ export default function EndevSystemEdge() {
                 <motion.div
                   whileHover={{ scale: 1.12 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="bg-[#3ac6c5] text-white w-16 h-16 rounded-xl shadow-lg flex items-center justify-center"
+                  className="bg-(--color-brand) text-white w-16 h-16 rounded-xl shadow-lg flex items-center justify-center"
                 >
                   <Icon size={32} />
                 </motion.div>

@@ -19,7 +19,7 @@ export default function ServicesGrid() {
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-10">
-          Our <span className="text-[#3ac6c5]">Services</span>
+          Our <span className="text-(--color-brand)">Services</span>
         </h2>
 
         <div className="flex justify-center gap-10 flex-wrap">
@@ -55,7 +55,7 @@ export default function ServicesGrid() {
                 <div className="mt-4 pt-3">
                   <span
                     className="
-                      text-[#3ac6c5] font-medium text-sm 
+                      text-(--color-brand) font-medium text-sm 
                       inline-flex items-center gap-1 
                       group-hover:underline 
                       transition-all 

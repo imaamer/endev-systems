@@ -12,7 +12,7 @@ export default function WhyChooseUs() {
       {/* TOP HEADING */}
       <div className="text-center py-16 px-4">
         <h2 className="text-4xl md:text-5xl font-bold">
-          Why <span className="text-[#3ac6c5]">Choose</span> Us
+          Why <span className="text-(--color-brand)">Choose</span> Us
         </h2>
 
         <p className="max-w-5xl mx-auto mt-6 text-lg md:text-xl text-gray-600 leading-relaxed">
@@ -32,7 +32,7 @@ export default function WhyChooseUs() {
           {/* ITEM 1 */}
           <div>
             <Calendar className="w-12 h-12 mx-auto mb-4 opacity-90" />
-            <p className="text-4xl font-semibold text-[#3ac6c5]">20+</p>
+            <p className="text-4xl font-semibold text-(--color-brand)">20+</p>
             <div className="mx-auto mt-3 mb-3 w-40 border-t border-gray-600" />
             <p className="text-sm tracking-wide uppercase text-gray-400">
               Years in Business
@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
           {/* ITEM 2 */}
           <div>
             <Users className="w-12 h-12 mx-auto mb-4 opacity-90" />
-            <p className="text-4xl font-semibold text-[#3ac6c5]">45+</p>
+            <p className="text-4xl font-semibold text-(--color-brand)">45+</p>
             <div className="mx-auto mt-3 mb-3 w-40 border-t border-gray-600" />
             <p className="text-sm tracking-wide uppercase text-gray-400">
               Designers & Engineers
@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
           {/* ITEM 3 */}
           <div>
             <Globe className="w-12 h-12 mx-auto mb-4 opacity-90" />
-            <p className="text-4xl font-semibold text-[#3ac6c5]">3</p>
+            <p className="text-4xl font-semibold text-(--color-brand)">3</p>
             <div className="mx-auto mt-3 mb-3 w-40 border-t border-gray-600" />
             <p className="text-sm tracking-wide uppercase text-gray-400">
               Strategic Locations
@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
           {/* ITEM 4 */}
           <div>
             <BatteryCharging className="w-12 h-12 mx-auto mb-4 opacity-90" />
-            <p className="text-4xl font-semibold text-[#3ac6c5]">25+</p>
+            <p className="text-4xl font-semibold text-(--color-brand)">25+</p>
             <div className="mx-auto mt-3 mb-3 w-40 border-t border-gray-600" />
             <p className="text-sm tracking-wide uppercase text-gray-400">
               Years Combined Experience
@@ -72,7 +72,7 @@ export default function WhyChooseUs() {
           {/* ITEM 5 */}
           <div>
             <UserCheck className="w-12 h-12 mx-auto mb-4 opacity-90" />
-            <p className="text-4xl font-semibold text-[#3ac6c5]">100</p>
+            <p className="text-4xl font-semibold text-(--color-brand)">100</p>
             <div className="mx-auto mt-3 mb-3 w-40 border-t border-gray-600" />
             <p className="text-sm tracking-wide uppercase text-gray-400">
               Customer Satisfaction

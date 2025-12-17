@@ -34,7 +34,7 @@ export default function ContactPage() {
                 rows={5}
                 className="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-red-500"
               />
-              <button className="bg-[#3ac6c5] text-white px-8 py-3 rounded-lg hover:bg-red-700 transition">
+              <button className="bg-(--color-brand) text-white px-8 py-3 rounded-lg hover:bg-red-700 transition">
                 Send Message
               </button>
             </form>

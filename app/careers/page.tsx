@@ -30,7 +30,7 @@ const jobs: Job[] = [
     ],
     requirements: [
       "Bachelor’s degree in Electrical, Electronics, or Computer Engineering.",
-      "2+ years of hands-on embedded firmware development experience.",
+      "5+ years of hands-on embedded firmware development experience.",
       "Strong proficiency in C/C++ and ARM-based platforms.",
       "Experience with RTOS and embedded Linux is a plus.",
       "Strong debugging and hardware-level understanding.",

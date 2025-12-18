@@ -8,8 +8,8 @@ const services = [
     href: "/services/embedded-systems",
   },
   {
-    title: "Custom PCB Design",
-    desc: "High-speed multilayer PCB layout ready for manufacturing.",
+    title: "High Speed PCB Layout",
+    desc: "Upto 48 Layers HDI board layout. Digital and mixed-signal designs (DDR, PCIe, USB, Ethernet, SERDES). Controlled impedance, length matching, differential pair optimization. Signal Integrity (SI), Power Integrity (PI), EMI/EMC compliance. IPC Class-3 oriented layouts for reliable, production-ready hardware.",
     href: "/services/pcb-design",
   },
   {
@@ -42,7 +42,7 @@ export default function ServicesGrid() {
             <Link key={s.title} href={s.href} className="group">
               <Card
                 className="
-                  w-[430px] h-[270px]
+                  w-[430px] h-[320px]
                   flex flex-col justify-between
                   p-6 cursor-pointer
                   border border-transparent 

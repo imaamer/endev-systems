@@ -7,7 +7,8 @@ function QuickLinks() {
 
   const links = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
+    { name: "PCB Design Services", href: "/services/pcb-design" },
+    { name: "Embedded System Services", href: "/services/embedded-systems" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },

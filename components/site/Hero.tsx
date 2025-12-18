@@ -74,7 +74,7 @@ export default function Hero() {
               src={current.image}
               alt={current.title}
               fill
-              className="object-cover opacity-80"
+              className="object-cover opacity-100"
             />
           </motion.div>
         </AnimatePresence>

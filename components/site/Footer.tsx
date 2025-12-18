@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  FacebookIcon,
-  TwitterIcon,
-  LinkedinIcon,
-  YoutubeIcon,
-  Download,
-} from "lucide-react";
+import { LinkedinIcon, YoutubeIcon, Download } from "lucide-react";
 import QuickLinks from "./QuickLinks";
 
 export default function Footer() {
@@ -27,18 +21,6 @@ export default function Footer() {
             delivering end-to-end product development—from concept to
             production.
           </p>
-
-          {/* <p className="mt-4 text-gray-400 leading-relaxed">
-            We design high-performance x86 Motherboards, FPGA-based platforms,
-            Data-Center Server and Networking Hardware Equipment. SBCs, SOMs,
-            Carrier Boards for Processors, FPGAs, ASICs and SOCs, with strong
-            attention to reliability, performance, and manufacturability. Our
-            work covers the complete development cycle, including Hardware
-            Design, Signal and Power integrity, Mechanical and Thermal
-            optimization, Firmware, Embedded software, and system integration.
-            At Endev Systems, we help companies turn challenging engineering
-            ideas into production-ready systems.
-          </p> */}
         </div>
 
         {/* QUICK LINKS */}

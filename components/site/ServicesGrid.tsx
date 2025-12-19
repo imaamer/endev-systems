@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Cpu, CircuitBoard, Code, Wifi, ShieldCheck } from "lucide-react";
+import { Cpu, CircuitBoard, Code, Wifi, ShieldCheck, Cog } from "lucide-react";
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
@@ -33,6 +33,12 @@ const services = [
     desc: "Hardware validation, compliance testing, signal & power integrity checks, thermal analysis, and production readiness verification.",
     href: "/services/pcb-design",
     icon: ShieldCheck,
+  },
+  {
+    title: "Mechanical & Thermal Design",
+    desc: "PCB mechanical integration with enclosures, connectors, and mounting constraints. Thermal analysis and heat-sink design for reliable operation. Plastic and metal enclosure design for manufacturability and durability. Optimization for airflow, EMI, and mechanical robustness",
+    href: "/services/pcb-design",
+    icon: Cog,
   },
 ];
 

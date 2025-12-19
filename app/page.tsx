@@ -3,7 +3,6 @@ import ServicesGrid from "@/components/site/ServicesGrid";
 import WhatWeDoSection from "@/components/site/WhatWeDoSection";
 import WhyChooseUs from "@/components/site/WhyChooseUs";
 import ConceptToManufacturing from "@/components/site/ConceptToManufacturing";
-import EndevSystemEdge from "@/components/site/EndevEdge";
 import ToolsExpertise from "@/components/site/ToolsExpertise";
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
       <ToolsExpertise />
       <ConceptToManufacturing />
       <WhyChooseUs />
-      <EndevSystemEdge />
     </>
   );
 }

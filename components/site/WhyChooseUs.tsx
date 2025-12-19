@@ -8,6 +8,8 @@ import {
   Target,
   ShieldCheck,
   SlidersHorizontal,
+  Clock,
+  Layers,
 } from "lucide-react";
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -43,24 +45,39 @@ const features = [
     title: "Tailored Solutions",
     desc: "Custom-designed solutions aligned precisely with your technical, regulatory, and business needs.",
   },
+  {
+    icon: Award,
+    title: "25+ Years of Hands-On Experience",
+    desc: "Over two decades of real-world engineering experience delivering production-ready hardware across diverse and demanding applications.",
+  },
+  {
+    icon: Layers,
+    title: "Cross-Domain Expertise",
+    desc: "Expertise spanning hardware, firmware, mechanical, thermal, and system-level design, enabling seamless integration across disciplines.",
+  },
+  {
+    icon: Clock,
+    title: "24×7 Design Support",
+    desc: "Global delivery model with round-the-clock engineering support to meet tight timelines and critical project milestones.",
+  },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="w-full bg-[#111] py-24">
+    <section className="w-full bg-[#F3F4F6] py-24">
       {/* Heading */}
       <div className="text-center px-4 mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-white">
+        <h2 className="text-4xl md:text-5xl font-bold">
           Why <span className="text-(--color-brand)">Choose</span> Us
         </h2>
 
-        <p className="mt-6 text-lg md:text-xl text-gray-400">
+        {/* <p className="mt-6 text-lg md:text-xl text-gray-400">
           Modern Engineering Approach & Sustainable Results
-        </p>
+        </p> */}
       </div>
 
       {/* Cards */}
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-8xl mx-auto px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map((item, index) => {
           const Icon = item.icon;
 

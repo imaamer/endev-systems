@@ -21,13 +21,13 @@ const steps = [
   {
     label: "Concept",
     icon: Lightbulb,
-    color: "#1F3A5F",
+    color: hexToRgba("#6BC48F", 0.4),
     items: ["Concept Validation", "MVP Specifications", "System Architecture"],
   },
   {
     label: "Hardware",
     icon: Cpu,
-    color: "#3FC7C2",
+    color: hexToRgba("#6BC48F", 0.5),
     items: [
       "High Level Design",
       "Low Level Design",
@@ -39,7 +39,7 @@ const steps = [
   {
     label: "PCB",
     icon: CircuitBoard,
-    color: "#6BC48F",
+    color: hexToRgba("#6BC48F", 0.6),
     items: [
       "PCB Layout Design",
       "Signal / Power / Thermal Integrity",
@@ -50,7 +50,7 @@ const steps = [
   {
     label: "Software",
     icon: Code,
-    color: "#F4C35A",
+    color: hexToRgba("#6BC48F", 0.7),
     items: [
       "Firmware Development",
       "Driver & BSP Development",
@@ -61,7 +61,7 @@ const steps = [
   {
     label: "ID",
     icon: Box,
-    color: "#8F7EE6",
+    color: hexToRgba("#6BC48F", 0.8),
     items: [
       "Enclosure Design",
       "Mechanical Design",
@@ -71,7 +71,7 @@ const steps = [
   {
     label: "NPI",
     icon: PackageSearch,
-    color: "#D6A42D",
+    color: hexToRgba("#6BC48F", 0.9),
     items: [
       "Compliance Certification (FCC / UL / CE)",
       "Vendor Audits",
@@ -81,16 +81,23 @@ const steps = [
   {
     label: "Manufacturing",
     icon: Factory,
-    color: "#F0673E",
+    color: hexToRgba("#6BC48F", 1),
     items: ["Manufacturing Coordination", "Manufacturing Testing"],
   },
 ];
+
+function hexToRgba(hex: string, alpha: number) {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
 
 export default function ConceptToManufacturing() {
   return (
     <section className="py-20 bg-white">
       <h2 className="text-center text-4xl md:text-5xl font-bold mb-14">
-        Development <span className="text-(--color-brand)">Prcess</span>
+        Development <span className="text-(--color-brand)">Process</span>
       </h2>
 
       <div className="flex justify-center">
@@ -105,10 +112,10 @@ export default function ConceptToManufacturing() {
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 220, damping: 14 }}
                     className="arrow-anchor arrow-step"
-                    style={{ backgroundColor: step.color, marginRight: "20px" }}
+                    style={{ backgroundColor: step.color, marginRight: "10px" }}
                   >
-                    <Icon className="w-7 h-7 mb-2 opacity-90 text-white" />
-                    <span className="tracking-wide text-sm text-white">
+                    <Icon className="w-7 h-7 mb-2 opacity-90" />
+                    <span className="tracking-wide text-sm">
                       {step.label.toUpperCase()}
                     </span>
                   </motion.div>
@@ -120,7 +127,7 @@ export default function ConceptToManufacturing() {
                   className="w-72 rounded-xl border bg-white shadow-xl"
                 >
                   <div
-                    className="rounded-t-md px-4 py-2 font-semibold text-white"
+                    className="rounded-t-md px-4 py-2 font-semibold text-black"
                     style={{ backgroundColor: step.color }}
                   >
                     {step.label}

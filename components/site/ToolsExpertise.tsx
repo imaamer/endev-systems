@@ -15,6 +15,11 @@ export default function ToolsExpertise() {
     { name: "Proteus", logo: "/images/tools/proteus.png" },
     { name: "Solidworks", logo: "/images/tools/solidworks.png" },
     { name: "Fusion 360", logo: "/images/tools/fusion360.png" },
+    { name: "Allegro", logo: "/images/tools/Allegro.png" },
+    { name: "Ansys", logo: "/images/tools/Ansys.png" },
+    { name: "Blender", logo: "/images/tools/Blender.png" },
+    { name: "Mentor", logo: "/images/tools/Mentor.png" },
+    { name: "Orcad_logo", logo: "/images/tools/Orcad_logo.png" },
   ];
 
   // duplicate 3x for large screens
@@ -61,6 +66,7 @@ export default function ToolsExpertise() {
             onMouseLeave={startMarquee}
             className="
               min-w-[180px]
+              h-[100px]
               rounded-xl
               border
               bg-white
@@ -76,11 +82,11 @@ export default function ToolsExpertise() {
               cursor-default
             "
           >
-            <div className="h-12 flex items-center justify-center mb-4">
+            <div className="flex items-center justify-center h-full">
               <img
                 src={tool.logo}
                 alt={tool.name}
-                className="max-h-14 object-contain"
+                className="max-h-12 max-w-24 object-contain"
               />
             </div>
 

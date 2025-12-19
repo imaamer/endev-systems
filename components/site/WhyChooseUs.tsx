@@ -1,84 +1,96 @@
+"use client";
+
+import { motion } from "framer-motion";
 import {
-  Calendar,
-  Users,
-  Globe,
-  BatteryCharging,
-  UserCheck,
+  Award,
+  Headset,
+  Wallet,
+  Target,
+  ShieldCheck,
+  SlidersHorizontal,
 } from "lucide-react";
+
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+
+const features = [
+  {
+    icon: Award,
+    title: "Industry Specialists",
+    desc: "Our team brings decades of hands-on experience and deep domain expertise in complex hardware and embedded systems.",
+  },
+  {
+    icon: Headset,
+    title: "Reliable Collaboration",
+    desc: "We work closely with clients throughout the development lifecycle, ensuring clarity, responsiveness, and trust.",
+  },
+  {
+    icon: Wallet,
+    title: "Transparent Pricing",
+    desc: "Clear project scoping and predictable costs from the start — no hidden charges or unexpected changes.",
+  },
+  {
+    icon: Target,
+    title: "Customer-Focused Approach",
+    desc: "Every engineering decision is driven by your requirements, timelines, and long-term product success.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Quality & Accountability",
+    desc: "We stand behind our work with rigorous validation, first-time-right execution, and engineering accountability.",
+  },
+  {
+    icon: SlidersHorizontal,
+    title: "Tailored Solutions",
+    desc: "Custom-designed solutions aligned precisely with your technical, regulatory, and business needs.",
+  },
+];
 
 export default function WhyChooseUs() {
   return (
-    <section className=" py-0 w-full  bg-[#F3F4F6]">
-      {/* TOP HEADING */}
-      <div className="text-center py-16 px-4">
-        <h2 className="text-4xl md:text-5xl font-bold">
+    <section className="w-full bg-[#111] py-24">
+      {/* Heading */}
+      <div className="text-center px-4 mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-white">
           Why <span className="text-(--color-brand)">Choose</span> Us
         </h2>
 
-        <p className="max-w-5xl mx-auto mt-6 text-lg md:text-xl text-gray-600 leading-relaxed">
-          EndevSystems has over 20 years of experience in designing complex
-          hardware for the most challenging applications.
-        </p>
-
-        <p className="max-w-4xl mx-auto text-lg md:text-xl text-gray-600 leading-relaxed">
-          We provide quick, cost-effective, and first-time-right solutions for
-          your requirements.
+        <p className="mt-6 text-lg md:text-xl text-gray-400">
+          Modern Engineering Approach & Sustainable Results
         </p>
       </div>
 
-      {/* STATS BAR */}
-      <div className="w-full bg-[#111] text-white py-16">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-12 text-center">
-          {/* ITEM 1 */}
-          <div>
-            <Calendar className="w-12 h-12 mx-auto mb-4 opacity-90" />
-            <p className="text-4xl font-semibold text-(--color-brand)">20+</p>
-            <div className="mx-auto mt-3 mb-3 w-40 border-t border-gray-600" />
-            <p className="text-sm tracking-wide uppercase text-gray-400">
-              Years in Business
-            </p>
-          </div>
+      {/* Cards */}
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {features.map((item, index) => {
+          const Icon = item.icon;
 
-          {/* ITEM 2 */}
-          <div>
-            <Users className="w-12 h-12 mx-auto mb-4 opacity-90" />
-            <p className="text-4xl font-semibold text-(--color-brand)">45+</p>
-            <div className="mx-auto mt-3 mb-3 w-40 border-t border-gray-600" />
-            <p className="text-sm tracking-wide uppercase text-gray-400">
-              Designers & Engineers
-            </p>
-          </div>
+          return (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.45,
+                ease: "easeOut",
+                delay: index * 0.06,
+              }}
+              viewport={{ once: true }}
+            >
+              <Card className="h-full hover:shadow-lg transition-shadow">
+                <CardHeader className="flex flex-row items-start gap-4">
+                  <Icon className="w-8 h-8 text-(--color-brand) mt-1" />
+                  <CardTitle className="text-lg text-gray-900">
+                    {item.title}
+                  </CardTitle>
+                </CardHeader>
 
-          {/* ITEM 3 */}
-          <div>
-            <Globe className="w-12 h-12 mx-auto mb-4 opacity-90" />
-            <p className="text-4xl font-semibold text-(--color-brand)">3</p>
-            <div className="mx-auto mt-3 mb-3 w-40 border-t border-gray-600" />
-            <p className="text-sm tracking-wide uppercase text-gray-400">
-              Strategic Locations
-            </p>
-          </div>
-
-          {/* ITEM 4 */}
-          <div>
-            <BatteryCharging className="w-12 h-12 mx-auto mb-4 opacity-90" />
-            <p className="text-4xl font-semibold text-(--color-brand)">25+</p>
-            <div className="mx-auto mt-3 mb-3 w-40 border-t border-gray-600" />
-            <p className="text-sm tracking-wide uppercase text-gray-400">
-              Years Combined Experience
-            </p>
-          </div>
-
-          {/* ITEM 5 */}
-          <div>
-            <UserCheck className="w-12 h-12 mx-auto mb-4 opacity-90" />
-            <p className="text-4xl font-semibold text-(--color-brand)">100</p>
-            <div className="mx-auto mt-3 mb-3 w-40 border-t border-gray-600" />
-            <p className="text-sm tracking-wide uppercase text-gray-400">
-              Customer Satisfaction
-            </p>
-          </div>
-        </div>
+                <CardContent className="pt-0 text-gray-600 leading-relaxed">
+                  {item.desc}
+                </CardContent>
+              </Card>
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );

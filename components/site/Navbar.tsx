@@ -32,13 +32,13 @@ const servicesMenuItems: {
 export default function Navbar() {
   return (
     <header className="border-b bg-white/80 backdrop-blur-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto flex justify-between items-center h-22 px-6">
+      <div className="max-w-8xl mx-auto flex justify-between items-center h-22 px-20">
         {/* Logo */}
         <Link href="/" className="flex items-center h-full">
           <Image
             src="/images/logo.png" // <-- put your logo here
             alt="Endev Systems Logo"
-            width={150}
+            width={200}
             height={50}
             className="object-contain"
             priority

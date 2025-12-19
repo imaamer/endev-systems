@@ -92,9 +92,9 @@ export default function Hero() {
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.7 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold">{current.title}</h1>
+            <h1 className="text-4xl md:text-7xl font-bold">{current.title}</h1>
 
-            <p className="text-lg md:text-xl text-gray-200 mt-2">
+            <p className="text-lg md:text-2xl text-gray-200 mt-2">
               {current.subtitle}
             </p>
 
@@ -106,7 +106,7 @@ export default function Hero() {
               >
                 <DialogTrigger asChild>
                   <button className="flex items-center gap-2 bg-white/20 px-5 py-2 rounded-md hover:bg-white/30 transition">
-                    <Play size={20} />
+                    <Play size={30} />
                     Watch Video
                   </button>
                 </DialogTrigger>

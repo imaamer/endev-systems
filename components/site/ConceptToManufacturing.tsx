@@ -90,7 +90,7 @@ export default function ConceptToManufacturing() {
   return (
     <section className="py-20 bg-white">
       <h2 className="text-center text-4xl md:text-5xl font-bold mb-14">
-        Concept <span className="text-(--color-brand)">To</span> Manufacturing
+        Development <span className="text-(--color-brand)">Prcess</span>
       </h2>
 
       <div className="flex justify-center">

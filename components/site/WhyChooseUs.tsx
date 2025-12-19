@@ -16,11 +16,6 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 const features = [
   {
-    icon: Award,
-    title: "Industry Specialists",
-    desc: "Our team brings decades of hands-on experience and deep domain expertise in complex hardware and embedded systems.",
-  },
-  {
     icon: Headset,
     title: "Reliable Collaboration",
     desc: "We work closely with clients throughout the development lifecycle, ensuring clarity, responsiveness, and trust.",

@@ -21,13 +21,13 @@ const steps = [
   {
     label: "Concept",
     icon: Lightbulb,
-    color: hexToRgba("#6BC48F", 0.4),
+    color: hexToRgba("#6BC48F", 0.2),
     items: ["Concept Validation", "MVP Specifications", "System Architecture"],
   },
   {
     label: "Hardware",
     icon: Cpu,
-    color: hexToRgba("#6BC48F", 0.5),
+    color: hexToRgba("#6BC48F", 0.3),
     items: [
       "High Level Design",
       "Low Level Design",
@@ -39,7 +39,7 @@ const steps = [
   {
     label: "PCB",
     icon: CircuitBoard,
-    color: hexToRgba("#6BC48F", 0.6),
+    color: hexToRgba("#6BC48F", 0.4),
     items: [
       "PCB Layout Design",
       "Signal / Power / Thermal Integrity",
@@ -50,7 +50,7 @@ const steps = [
   {
     label: "Software",
     icon: Code,
-    color: hexToRgba("#6BC48F", 0.7),
+    color: hexToRgba("#6BC48F", 0.5),
     items: [
       "Firmware Development",
       "Driver & BSP Development",
@@ -61,7 +61,7 @@ const steps = [
   {
     label: "ID",
     icon: Box,
-    color: hexToRgba("#6BC48F", 0.8),
+    color: hexToRgba("#6BC48F", 0.7),
     items: [
       "Enclosure Design",
       "Mechanical Design",

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
@@ -83,7 +84,7 @@ export default function ToolsExpertise() {
               />
             </div>
 
-            <p className="text-sm font-semibold text-gray-700">{tool.name}</p>
+            {/* <p className="text-sm font-semibold text-gray-700">{tool.name}</p> */}
           </div>
         ))}
       </motion.div>

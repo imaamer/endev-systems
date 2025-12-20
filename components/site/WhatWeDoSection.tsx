@@ -9,7 +9,7 @@ export default function WhatWeDoSection() {
     <section className="w-full bg-[#F3F4F6] py-34">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-44 items-start">
-          {/* LEFT – Image */}
+          {/* LEFT – Image Collage */}
           <motion.div
             className="flex justify-center lg:-mt-12"
             initial={{ opacity: 0, x: -40 }}
@@ -17,11 +17,59 @@ export default function WhatWeDoSection() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <img
-              src="/images/what-we-do.png"
-              alt="Endev Systems engineering team at work"
-              className="rounded-xl shadow-lg max-w-full"
-            />
+            <div
+              className="relative rounded-xl shadow-lg overflow-hidden max-w-full p-6 md:p-8"
+              style={{
+                minHeight: "520px",
+                minWidth: "550px",
+                backgroundColor: "#E6F2FF",
+                backgroundImage: `radial-gradient(circle, #3ac6c5 1.5px, transparent 1.5px)`,
+                backgroundSize: "24px 24px",
+                backgroundPosition: "0 0",
+              }}
+            >
+              {/* Organic Collage Layout */}
+              <div
+                className="relative w-full h-full z-10"
+                style={{ minHeight: "480px" }}
+              >
+                {/* Image 1 - Top Left, Medium */}
+                <div className="absolute top-0 left-0 w-44 md:w-52 h-52 md:h-60 overflow-hidden rounded-lg shadow-md z-10">
+                  <img
+                    src="/images/what-we-do/1.jpeg"
+                    alt="Endev Systems engineering team at work"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Image 2 - Top Right, Larger */}
+                <div className="absolute top-6 md:top-8 right-0 md:right-4 w-48 md:w-56 h-56 md:h-64 overflow-hidden rounded-lg shadow-md z-20">
+                  <img
+                    src="/images/what-we-do/2.jpeg"
+                    alt="Endev Systems engineering team at work"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Image 3 - Bottom Left, Smaller */}
+                <div className="absolute bottom-4 md:bottom-8 left-6 md:left-8 w-40 md:w-48 h-48 md:h-56 overflow-hidden rounded-lg shadow-md z-30">
+                  <img
+                    src="/images/what-we-do/3.jpeg"
+                    alt="Endev Systems engineering team at work"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Image 4 - Bottom Right, Medium */}
+                <div className="absolute bottom-0 right-8 md:right-12 w-44 md:w-52 h-52 md:h-60 overflow-hidden rounded-lg shadow-md z-40">
+                  <img
+                    src="/images/what-we-do/4.jpeg"
+                    alt="Endev Systems engineering team at work"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
           </motion.div>
 
           {/* RIGHT – Content */}

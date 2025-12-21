@@ -152,7 +152,7 @@ export default function ContactPage() {
             <p className="text-gray-700 leading-relaxed">
               Discuss your project with us today. Request a quote online or call
               us at <br />
-              <span className="font-medium">+1-412-265-2314</span>.
+              <span className="font-medium">+92 3164100201</span>.
             </p>
 
             <div className="rounded-xl overflow-hidden shadow">

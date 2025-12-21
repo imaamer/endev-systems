@@ -18,8 +18,8 @@ export async function POST(req: Request) {
 
     const { data, error } = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>", // ✅ REQUIRED
-      to: ["engr.amir081@gmail.com"],
-      subject: `New Contact Request – ${name}`,
+      to: ["info@endevsystems.com"],
+      subject: `Query from ${name} – ${name}`,
       html: `
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>

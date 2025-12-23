@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-console.log("RESEND_API_KEY exists:", !!process.env.RESEND_API_KEY);
+console.log("ENV CHECK:", {
+  hasKey: !!process.env.RESEND_API_KEY,
+  nodeEnv: process.env.NODE_ENV,
+});
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

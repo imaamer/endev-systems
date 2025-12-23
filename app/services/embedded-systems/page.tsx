@@ -1,4 +1,5 @@
 import Image from "next/image";
+import GetAQuote from "@/components/site/GetAQuote";
 
 const capabilities = {
   "Services Provided": [
@@ -147,6 +148,9 @@ export default function EmbeddedSystemServicePage() {
             </div>
           </div>
         </div>
+      </section>
+      <section className="flex justify-center pt-12">
+        <GetAQuote />
       </section>
     </div>
   );

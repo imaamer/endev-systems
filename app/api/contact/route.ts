@@ -1,12 +1,14 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
+console.log("RESEND_API_KEY exists:", !!process.env.RESEND_API_KEY);
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
     const { name, email, message, company } = await req.json();
-
+    console.log("Incoming payload:", req.json());
     // Honeypot
     if (company) {
       return NextResponse.json({ success: true });
@@ -18,7 +20,7 @@ export async function POST(req: Request) {
 
     const { data, error } = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>", // ✅ REQUIRED
-      to: ["info@endevsystems.com"],
+      to: ["engr.amir081@gmail.com"],
       subject: `Query from ${name} – ${name}`,
       html: `
         <p><strong>Name:</strong> ${name}</p>

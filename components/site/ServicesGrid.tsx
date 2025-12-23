@@ -1,5 +1,13 @@
 import Link from "next/link";
-import { Cpu, CircuitBoard, Code, Wifi, ShieldCheck, Cog } from "lucide-react";
+import {
+  Cpu,
+  CircuitBoard,
+  Code,
+  Wifi,
+  ShieldCheck,
+  Cog,
+  Zap,
+} from "lucide-react";
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
@@ -40,6 +48,12 @@ const services = [
     href: "/services/pcb-design",
     icon: Cog,
   },
+  {
+    title: "Power Electronics Design",
+    desc: "AC-DC, DC-DC Converters,  SMPS,  Battery Charging Systems,  Power Management,  Protection Circuits, and Thermal optimization with strong focus on reliability, efficiency, EMI/EMC compliance, and manufacturability for production-ready hardware.",
+    href: "/services/pcb-design",
+    icon: Zap,
+  },
 ];
 
 export default function ServicesGrid() {
@@ -59,7 +73,7 @@ export default function ServicesGrid() {
                 <Card
                   className="
                     relative
-                    w-[430px] h-[320px]
+                    w-[430px] h-[260px]
                     flex flex-col justify-between
                     p-6 cursor-pointer
                     border border-transparent 
@@ -89,7 +103,7 @@ export default function ServicesGrid() {
                       </CardTitle>
                     </CardHeader>
 
-                    <CardContent className="p-0 text-gray-600 text-[17px] leading-relaxed">
+                    <CardContent className="p-0 text-gray-600 text-[14px] leading-relaxed">
                       {s.desc}
                     </CardContent>
                   </div>

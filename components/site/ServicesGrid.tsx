@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   Cog,
   Zap,
+  Network,
 } from "lucide-react";
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -54,6 +55,12 @@ const services = [
     href: "/services/pcb-design",
     icon: Zap,
   },
+  {
+    title: "Data Center Server and Networking Equipment Design",
+    desc: "We design high-performance data-center hardware, including server motherboards, storage platforms, and networking equipment such as Ethernet switches, routers, and NICs designs for reliable, scalable deployment in enterprise and cloud environments.",
+    href: "/services/pcb-design",
+    icon: Network,
+  },
 ];
 
 export default function ServicesGrid() {
@@ -73,7 +80,7 @@ export default function ServicesGrid() {
                 <Card
                   className="
                     relative
-                    w-[430px] h-[260px]
+                    w-[430px] h-[280px]
                     flex flex-col justify-between
                     p-6 cursor-pointer
                     border border-transparent 

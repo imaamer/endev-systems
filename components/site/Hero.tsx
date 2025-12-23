@@ -13,7 +13,7 @@ import {
 
 const slides = [
   {
-    image: "/images/hero1.jpeg",
+    image: "/images/hero1.jpg",
     title: "Engineering Excellence for Modern Systems",
     subtitle:
       "We design embedded platforms, electronics, and robust industrial solutions.",

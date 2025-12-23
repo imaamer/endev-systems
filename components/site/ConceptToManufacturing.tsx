@@ -95,7 +95,7 @@ function hexToRgba(hex: string, alpha: number) {
 
 export default function ConceptToManufacturing() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#F3F4F6]">
       <h2 className="text-center text-4xl md:text-5xl font-bold mb-14">
         Development <span className="text-(--color-brand)">Process</span>
       </h2>

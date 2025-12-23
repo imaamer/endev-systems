@@ -11,8 +11,8 @@ export default function Home() {
       <Hero />
       <WhatWeDoSection />
       <ServicesGrid />
-      <ToolsExpertise />
       <ConceptToManufacturing />
+      <ToolsExpertise />
       <WhyChooseUs />
     </>
   );

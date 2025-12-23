@@ -31,7 +31,7 @@ export default function ToolsExpertise() {
             <div
               key={tool.name}
               className="
-                w-[200px]
+                w-[220px]
                 h-[150px]
                 bg-white
                 rounded-2xl

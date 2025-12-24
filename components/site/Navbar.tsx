@@ -51,7 +51,7 @@ export default function Navbar() {
             <NavigationMenuItem>
               <NavigationMenuLink
                 asChild
-                className={navigationMenuTriggerStyle()}
+                className={`${navigationMenuTriggerStyle()} text-[17px]`}
               >
                 <Link href="/">Home</Link>
               </NavigationMenuLink>
@@ -59,15 +59,19 @@ export default function Navbar() {
 
             {/* SERVICES DROPDOWN */}
             <NavigationMenuItem className="hidden md:block">
-              <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="text-[17px]">
+                Services
+              </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[300px] gap-4">
                   <li>
                     {servicesMenuItems.map((component) => (
                       <NavigationMenuLink asChild key={component.title}>
                         <Link href={component.href}>
-                          <div className="font-medium">{component.title}</div>
-                          <div className="text-muted-foreground">
+                          <div className="font-medium text-[17px]">
+                            {component.title}
+                          </div>
+                          <div className="text-muted-foreground text-[17px]">
                             {component.description}
                           </div>
                         </Link>
@@ -83,7 +87,7 @@ export default function Navbar() {
             <NavigationMenuItem>
               <NavigationMenuLink
                 asChild
-                className={navigationMenuTriggerStyle()}
+                className={`${navigationMenuTriggerStyle()} text-[17px]`}
               >
                 <Link href="/case-studies">Case Studies</Link>
               </NavigationMenuLink>
@@ -91,7 +95,7 @@ export default function Navbar() {
             <NavigationMenuItem>
               <NavigationMenuLink
                 asChild
-                className={navigationMenuTriggerStyle()}
+                className={`${navigationMenuTriggerStyle()} text-[17px]`}
               >
                 <Link href="/careers">Careers</Link>
               </NavigationMenuLink>
@@ -99,7 +103,7 @@ export default function Navbar() {
             <NavigationMenuItem>
               <NavigationMenuLink
                 asChild
-                className={navigationMenuTriggerStyle()}
+                className={`${navigationMenuTriggerStyle()} text-[17px]`}
               >
                 <Link href="/contact">Contact</Link>
               </NavigationMenuLink>

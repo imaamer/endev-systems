@@ -19,7 +19,7 @@ export default function ToolsExpertise() {
 
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-400 mx-auto px-6">
         {/* SECTION TITLE */}
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-14">
           Tools <span className="text-(--color-brand)">Expertise</span>

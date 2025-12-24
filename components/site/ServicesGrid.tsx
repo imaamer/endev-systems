@@ -20,34 +20,10 @@ const services = [
     icon: Cpu,
   },
   {
-    title: "High Speed PCB Layout",
-    desc: "Upto 48 Layers HDI board layout. Digital and mixed-signal designs (DDR, PCIe, USB, Ethernet, SERDES). Controlled impedance, length matching, differential pair optimization. Signal Integrity (SI), Power Integrity (PI), EMI/EMC compliance. IPC Class-3 oriented layouts for reliable, production-ready hardware.",
+    title: "Data Center Server and Networking Equipment Design",
+    desc: "We design high-performance data-center hardware, including server motherboards, storage platforms, and networking equipment such as Ethernet switches, routers, and NICs designs for reliable, scalable deployment in enterprise and cloud environments.",
     href: "/services/pcb-design",
-    icon: CircuitBoard,
-  },
-  {
-    title: "Firmware Development",
-    desc: "Firmware development for microcontrollers, microprocessors and FPGAs. Device driver development services - PCI Express, Ethernet, USB, SATA, SPI, I2C and etc.",
-    href: "/services/pcb-design",
-    icon: Code,
-  },
-  {
-    title: "IoT Product Design",
-    desc: "IoT hardware and firmware design, BLE, Wi-Fi, and Ethernet based products, Embedded software and cloud integration, Web dashboards and mobile applications for Android and iOS, real-world IoT deployments",
-    href: "/services/pcb-design",
-    icon: Wifi,
-  },
-  {
-    title: "Prototype Testing and Validation",
-    desc: "Hardware validation, compliance testing, signal & power integrity checks, thermal analysis, and production readiness verification.",
-    href: "/services/pcb-design",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Mechanical & Thermal Design",
-    desc: "PCB mechanical integration with enclosures, connectors, and mounting constraints. Thermal analysis and heat-sink design for reliable operation. Plastic and metal enclosure design for manufacturability and durability. Optimization for airflow, EMI, and mechanical robustness",
-    href: "/services/pcb-design",
-    icon: Cog,
+    icon: Network,
   },
   {
     title: "Power Electronics Design",
@@ -56,10 +32,35 @@ const services = [
     icon: Zap,
   },
   {
-    title: "Data Center Server and Networking Equipment Design",
-    desc: "We design high-performance data-center hardware, including server motherboards, storage platforms, and networking equipment such as Ethernet switches, routers, and NICs designs for reliable, scalable deployment in enterprise and cloud environments.",
+    title: "IoT Product Design",
+    desc: "IoT hardware and firmware design, BLE, Wi-Fi, and Ethernet based products, Embedded software and cloud integration, Web dashboards and mobile applications for Android and iOS, real-world IoT deployments",
     href: "/services/pcb-design",
-    icon: Network,
+    icon: Wifi,
+  },
+  {
+    title: "Firmware Development",
+    desc: "Firmware development for microcontrollers, microprocessors and FPGAs. Device driver development services - PCI Express, Ethernet, USB, SATA, SPI, I2C and etc.",
+    href: "/services/pcb-design",
+    icon: Code,
+  },
+  {
+    title: "High Speed PCB Layout",
+    desc: "Upto 48 Layers HDI board layout. Digital and mixed-signal designs (DDR, PCIe, USB, Ethernet, SERDES). Controlled impedance, length matching, differential pair optimization. Signal Integrity (SI), Power Integrity (PI), EMI/EMC compliance. IPC Class-3 oriented layouts for reliable, production-ready hardware.",
+    href: "/services/pcb-design",
+    icon: CircuitBoard,
+  },
+  {
+    title: "Mechanical & Thermal Design",
+    desc: "PCB mechanical integration with enclosures, connectors, and mounting constraints. Thermal analysis and heat-sink design for reliable operation. Plastic and metal enclosure design for manufacturability and durability. Optimization for airflow, EMI, and mechanical robustness",
+    href: "/services/pcb-design",
+    icon: Cog,
+  },
+
+  {
+    title: "Prototype Testing and Validation",
+    desc: "Hardware validation, compliance testing, signal & power integrity checks, thermal analysis, and production readiness verification.",
+    href: "/services/pcb-design",
+    icon: ShieldCheck,
   },
 ];
 
@@ -104,8 +105,8 @@ export default function ServicesGrid() {
 
                   {/* HEADER + CONTENT */}
                   <div>
-                    <CardHeader className="p-0 mb-2">
-                      <CardTitle className="text-xl font-semibold">
+                    <CardHeader className="p-0 mr-8 mb-2">
+                      <CardTitle className="text-[22px] font-semibold">
                         {s.title}
                       </CardTitle>
                     </CardHeader>

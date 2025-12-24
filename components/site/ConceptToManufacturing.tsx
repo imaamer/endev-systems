@@ -114,8 +114,8 @@ export default function ConceptToManufacturing() {
                     className="arrow-anchor arrow-step"
                     style={{ backgroundColor: step.color, marginRight: "10px" }}
                   >
-                    <Icon className="w-7 h-7 mb-2 opacity-90" />
-                    <span className="tracking-wide text-sm">
+                    <Icon className="w-10 h-10 mb-2 opacity-90" />
+                    <span className="tracking-wide text-[16px]">
                       {step.label.toUpperCase()}
                     </span>
                   </motion.div>

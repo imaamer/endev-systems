@@ -35,10 +35,9 @@ export default function ToolsExpertise() {
                 h-[150px]
                 bg-white
                 rounded-2xl
-                border
-                shadow-sm
-                hover:shadow-xl
-                transition-all
+               
+               
+                
                 duration-300
                 flex
                 flex-col
@@ -56,7 +55,7 @@ export default function ToolsExpertise() {
               />
 
               {/* LABEL */}
-              <p className="text-sm font-medium text-gray-700">{tool.name}</p>
+              {/* <p className="text-sm font-medium text-gray-700">{tool.name}</p> */}
             </div>
           ))}
         </div>

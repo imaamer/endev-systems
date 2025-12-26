@@ -15,23 +15,29 @@ export default function ToolsExpertise() {
     { name: "ANSYS", logo: "/images/tools/Ansys.png" },
     { name: "Blender", logo: "/images/tools/Blender.png" },
     { name: "Mentor Graphics", logo: "/images/tools/Mentor.png" },
+    { name: "Autodesk", logo: "/images/tools/autodesk.jpeg" },
+    { name: "Cadence", logo: "/images/tools/cadence.jpeg" },
+    { name: "Keysight", logo: "/images/tools/keysights.jpeg" },
+    { name: "DipTrace", logo: "/images/tools/diptrace.jpeg" },
+    { name: "Zuken", logo: "/images/tools/zuken.jpeg" },
+    { name: "Autocad", logo: "/images/tools/autocad.jpeg" },
   ];
 
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-400 mx-auto px-6">
+      <div className="max-w-450 mx-auto px-6">
         {/* SECTION TITLE */}
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-14">
           Tools <span className="text-(--color-brand)">Expertise</span>
         </h2>
 
         {/* TOOLS WRAPPER */}
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-2">
           {tools.map((tool) => (
             <div
               key={tool.name}
               className="
-                w-[220px]
+                w-[180px]
                 h-[150px]
                 bg-white
                 rounded-2xl

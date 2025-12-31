@@ -2,8 +2,8 @@ import Hero from "@/components/site/Hero";
 import ServicesGrid from "@/components/site/ServicesGrid";
 import WhatWeDoSection from "@/components/site/WhatWeDoSection";
 import WhyChooseUs from "@/components/site/WhyChooseUs";
-import ConceptToManufacturing from "@/components/site/ConceptToManufacturing";
 import ToolsExpertise from "@/components/site/ToolsExpertise";
+import DevelopmentProcess from "@/components/site/DevelopmentProcess";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <WhatWeDoSection />
       <ServicesGrid />
-      <ConceptToManufacturing />
+      <DevelopmentProcess />
       <ToolsExpertise />
       <WhyChooseUs />
     </>

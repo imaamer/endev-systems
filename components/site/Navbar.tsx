@@ -97,6 +97,14 @@ export default function Navbar() {
                 asChild
                 className={`${navigationMenuTriggerStyle()} text-[17px]`}
               >
+                <Link href="/faqs">FAQs</Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                asChild
+                className={`${navigationMenuTriggerStyle()} text-[17px]`}
+              >
                 <Link href="/careers">Careers</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>

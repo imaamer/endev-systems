@@ -12,17 +12,27 @@ import {
 
 import { motion } from "framer-motion";
 
+const palette = [
+  "#6BC48F", // green
+  "#6BAED6", // blue
+  "#F4A261", // orange
+  "#E76F51", // red
+  "#9B5DE5", // purple
+  "#2EC4B6", // teal
+  "#F77F00", // amber
+];
+
 const steps = [
   {
     label: "Concept",
     icon: Lightbulb,
-    color: hexToRgba("#6BC48F", 0.2),
+    color: hexToRgba(palette[0], 1),
     items: ["Concept Validation", "MVP Specifications", "System Architecture"],
   },
   {
     label: "Hardware",
     icon: Cpu,
-    color: hexToRgba("#6BC48F", 0.3),
+    color: hexToRgba(palette[1], 1),
     items: [
       "High Level Design",
       "Low Level Design",
@@ -34,7 +44,7 @@ const steps = [
   {
     label: "PCB",
     icon: CircuitBoard,
-    color: hexToRgba("#6BC48F", 0.4),
+    color: hexToRgba(palette[2], 1),
     items: [
       "PCB Layout Design",
       "Signal / Power / Thermal Integrity",
@@ -45,7 +55,7 @@ const steps = [
   {
     label: "Software",
     icon: Code,
-    color: hexToRgba("#6BC48F", 0.5),
+    color: hexToRgba(palette[3], 1),
     items: [
       "Firmware Development",
       "Driver & BSP Development",
@@ -56,7 +66,7 @@ const steps = [
   {
     label: "ID",
     icon: Box,
-    color: hexToRgba("#6BC48F", 0.7),
+    color: hexToRgba(palette[4], 0.8),
     items: [
       "Enclosure Design",
       "Mechanical Design",
@@ -66,7 +76,7 @@ const steps = [
   {
     label: "NPI",
     icon: PackageSearch,
-    color: hexToRgba("#6BC48F", 0.9),
+    color: hexToRgba(palette[5], 1),
     items: [
       "Compliance Certification (FCC / UL / CE)",
       "Vendor Audits",
@@ -76,7 +86,7 @@ const steps = [
   {
     label: "Manufacturing",
     icon: Factory,
-    color: hexToRgba("#6BC48F", 1),
+    color: hexToRgba(palette[6], 1),
     items: ["Manufacturing Coordination", "Manufacturing Testing"],
   },
 ];
@@ -109,14 +119,26 @@ export default function DevelopmentProcess() {
                   className="arrow-anchor arrow-step mb-4"
                   style={{ backgroundColor: step.color }}
                 >
-                  <Icon className="w-10 h-10 mb-2 opacity-90" />
-                  <span className="tracking-wide text-[16px]">
-                    {step.label.toUpperCase()}
-                  </span>
+                  <div className="w-full flex flex-col items-center justify-center mt-15">
+                    <Icon className="w-10 h-10 mb-2 opacity-90" />
+                    <span className="tracking-wide text-[16px]">
+                      {step.label.toUpperCase()}
+                    </span>
+                  </div>
+                  <div className="w-52 ml-2 h-38 mt-10">
+                    <ul className="p-1 space-y-2 text-sm text-gray-700">
+                      {step.items.map((item) => (
+                        <li key={item} className="flex gap-2">
+                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-black" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </motion.div>
 
                 {/* Always-visible info card */}
-                <div className="w-50 rounded-xl border bg-white">
+                {/* <div className="w-50 rounded-xl border bg-white">
                   <div
                     className="rounded-t-md px-4 py-2 font-semibold text-black"
                     style={{ backgroundColor: step.color }}
@@ -132,7 +154,7 @@ export default function DevelopmentProcess() {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </div> */}
               </div>
             );
           })}

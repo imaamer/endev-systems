@@ -23,16 +23,26 @@
 
 /* Core arrow shape */
 .arrow-step {
-  min-width: 250px;
-  height: 200px;
-  padding: 1rem 2.5rem;
+  width: 250px;
+  height: 350px;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
 
-  clip-path: polygon(0% 0%, 82% 0%, 100% 50%, 82% 100%, 0% 100%, 18% 50%);
+  clip-path: polygon(
+    0% 0%,
+    /* top-left */ 90% 0%,
+    /* top-right before arrow head */ 100% 25%,
+    /* arrow tip */ 90% 50%,
+    /* right diagonal down */ 90% 100%,
+    /* right vertical bottom */ 0% 100%,
+    /* bottom-left */ 0% 50%,
+    /* left vertical up */ 10% 25%,
+    /* left inward notch */ 0% 0%,
+    /* left diagonal up */ 25% 0% /* back to top-left vertical */
+  );
 }
 
 /* overlap arrows slightly */

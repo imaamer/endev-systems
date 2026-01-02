@@ -11,7 +11,7 @@ export default function WhatWeDoSection() {
         <div className="flex flex-col lg:flex-row items-start justify-center gap-10">
           {/* LEFT – Image */}
           <motion.div
-            className="flex justify-center lg:-mt-12 max-w-4xl lg:w-auto lg:max-w-5xl lg:min-w-3xl"
+            className="flex justify-center max-w-4xl lg:w-auto lg:max-w-5xl lg:min-w-3xl"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}

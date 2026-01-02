@@ -14,25 +14,25 @@ import { motion } from "framer-motion";
 
 const palette = [
   "#6BC48F", // green
-  "#6BAED6", // blue
-  "#F4A261", // orange
-  "#E76F51", // red
-  "#9B5DE5", // purple
-  "#2EC4B6", // teal
-  "#F77F00", // amber
+  "#6BC48F", // blue
+  "#6BC48F", // orange
+  "#6BC48F", // red
+  "#6BC48F", // purple
+  "#6BC48F", // teal
+  "#6BC48F", // amber
 ];
 
 const steps = [
   {
     label: "Concept",
     icon: Lightbulb,
-    color: hexToRgba(palette[0], 1),
+    color: hexToRgba(palette[0], 0.4),
     items: ["Concept Validation", "MVP Specifications", "System Architecture"],
   },
   {
     label: "Hardware",
     icon: Cpu,
-    color: hexToRgba(palette[1], 1),
+    color: hexToRgba(palette[1], 0.5),
     items: [
       "High Level Design",
       "Low Level Design",
@@ -44,7 +44,7 @@ const steps = [
   {
     label: "PCB",
     icon: CircuitBoard,
-    color: hexToRgba(palette[2], 1),
+    color: hexToRgba(palette[2], 0.6),
     items: [
       "PCB Layout Design",
       "Signal / Power / Thermal Integrity",
@@ -55,7 +55,7 @@ const steps = [
   {
     label: "Software",
     icon: Code,
-    color: hexToRgba(palette[3], 1),
+    color: hexToRgba(palette[3], 0.7),
     items: [
       "Firmware Development",
       "Driver & BSP Development",
@@ -76,7 +76,7 @@ const steps = [
   {
     label: "NPI",
     icon: PackageSearch,
-    color: hexToRgba(palette[5], 1),
+    color: hexToRgba(palette[5], 0.9),
     items: [
       "Compliance Certification (FCC / UL / CE)",
       "Vendor Audits",
@@ -116,36 +116,22 @@ export default function DevelopmentProcess() {
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 220, damping: 14 }}
-                  className="arrow-anchor arrow-step mb-4"
+                  className="arrow-anchor arrow-step mb-1"
                   style={{ backgroundColor: step.color }}
                 >
-                  <div className="w-full flex flex-col items-center justify-center mt-15">
+                  <div className="w-full flex flex-col items-center justify-center">
                     <Icon className="w-10 h-10 mb-2 opacity-90" />
                     <span className="tracking-wide text-[16px]">
                       {step.label.toUpperCase()}
                     </span>
                   </div>
-                  <div className="w-52 ml-2 h-38 mt-10">
-                    <ul className="p-1 space-y-2 text-sm text-gray-700">
-                      {step.items.map((item) => (
-                        <li key={item} className="flex gap-2">
-                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-black" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
                 </motion.div>
 
                 {/* Always-visible info card */}
-                {/* <div className="w-50 rounded-xl border bg-white">
-                  <div
-                    className="rounded-t-md px-4 py-2 font-semibold text-black"
-                    style={{ backgroundColor: step.color }}
-                  >
-                    {step.label}
-                  </div>
-
+                <div
+                  className="w-[205px]"
+                  style={{ backgroundColor: step.color }}
+                >
                   <ul className="p-4 space-y-2 text-sm text-gray-700">
                     {step.items.map((item) => (
                       <li key={item} className="flex gap-2">
@@ -154,7 +140,7 @@ export default function DevelopmentProcess() {
                       </li>
                     ))}
                   </ul>
-                </div> */}
+                </div>
               </div>
             );
           })}

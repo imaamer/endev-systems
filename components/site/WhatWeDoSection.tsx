@@ -17,7 +17,7 @@ export default function WhatWeDoSection() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <div className="relative rounded-xl bg-white p-6 w-full h-fit">
+            <div className="relative rounded-xl w-full h-fit">
               <div className="relative w-full overflow-hidden rounded-lg h-fit">
                 <img
                   src="/images/what-we-do/main.jpeg"

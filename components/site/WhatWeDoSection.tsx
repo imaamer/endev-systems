@@ -6,18 +6,18 @@ import { motion } from "framer-motion";
 
 export default function WhatWeDoSection() {
   return (
-    <section className="w-full bg-[#F3F4F6] py-34">
+    <section className="w-full bg-white py-34">
       <div className="max-w-8xl mx-auto px-30">
         <div className="flex flex-col lg:flex-row items-start justify-center gap-10">
           {/* LEFT – Image */}
           <motion.div
-            className="flex justify-center max-w-4xl lg:w-auto lg:max-w-5xl lg:min-w-3xl"
+            className="flex justify-center max-w-4xl lg:w-auto lg:max-w-7xl lg:min-w-3xl"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <div className="relative rounded-xl shadow-lg bg-white p-6 w-full h-fit">
+            <div className="relative rounded-xl bg-white p-6 w-full h-fit">
               <div className="relative w-full overflow-hidden rounded-lg h-fit">
                 <img
                   src="/images/what-we-do/main.jpeg"

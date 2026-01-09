@@ -100,7 +100,7 @@ function hexToRgba(hex: string, alpha: number) {
 
 export default function DevelopmentProcess() {
   return (
-    <section className="py-20 bg-[#F3F4F6]">
+    <section className="py-20">
       <h2 className="text-center text-4xl md:text-5xl font-bold mb-16">
         Development <span className="text-(--color-brand)">Process</span>
       </h2>

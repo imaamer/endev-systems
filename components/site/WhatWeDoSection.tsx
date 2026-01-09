@@ -37,12 +37,12 @@ export default function WhatWeDoSection() {
             viewport={{ once: true }}
           >
             {/* Heading */}
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold w-full text-center">
               What <span className="text-(--color-brand)">We</span> Do
             </h2>
 
             {/* Tagline */}
-            <p className="mt-4 text-lg md:text-xl">
+            <p className="mt-4 text-[20px] md:text-[24px]">
               Engineering mission-critical platforms with precision and purpose
             </p>
 
@@ -56,13 +56,16 @@ export default function WhatWeDoSection() {
               reliability, performance, compliance, and manufacturability. We
               develop SBCs, SOMs, and carrier boards for processors, FPGAs,
               SoCs, and ASICs, addressing complex challenges in high-speed
-              interfaces, power delivery, EMI/ESD, and thermal constraints. Our
-              engineering covers the entire product lifecycle—from architecture
-              and schematic design to signal & power integrity, PCB layout,
-              mechanical and thermal optimization, firmware, embedded software,
-              and system-level integration. With a production-driven mindset and
-              deep cross-disciplinary expertise, Endev Systems transforms
-              complex engineering ideas into robust, scalable, and
+              interfaces, power delivery, EMI/ESD, and thermal constraints.
+            </p>
+
+            <p className="mt-8 text-gray-600 text-sm md:text-base leading-relaxed text-justify">
+              Our engineering covers the entire product lifecycle—from
+              architecture and schematic design to signal & power integrity, PCB
+              layout, mechanical and thermal optimization, firmware, embedded
+              software, and system-level integration. With a production-driven
+              mindset and deep cross-disciplinary expertise, Endev Systems
+              transforms complex engineering ideas into robust, scalable, and
               production-ready solutions.
             </p>
 

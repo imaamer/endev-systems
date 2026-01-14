@@ -6,7 +6,7 @@ import QuickLinks from "./QuickLinks";
 export default function Footer() {
   return (
     <footer className="bg-[#1A1A1D] text-gray-200 py-16">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-4 md:grid-cols-2 gap-12">
+      <div className="max-w-8xl px-40 grid lg:grid-cols-6 md:grid-cols-2 gap-12">
         {/* ABOUT SECTION */}
         <div>
           <h3 className="text-lg font-bold mb-4 tracking-wide">ABOUT US</h3>
@@ -61,9 +61,24 @@ export default function Footer() {
               <p>208 Global Heights</p>
               <p>Abdul Haq Road, Opp Exp Center</p>
               <p>Lahore, Pakistan</p>
-              <p className="mt-2">+92 3164100201</p>
+              <p className="mt-2"> +92 3291581789</p>
               <p className="text-(--color-brand)">info@endevsystems.com</p>
             </div>
+          </div>
+        </div>
+
+        {/* MAP SECTION */}
+        <div className="lg:col-span-2">
+          <h3 className="text-lg font-bold mb-4 tracking-wide">LOCATION</h3>
+
+          <div className="w-full h-[240px] rounded-lg overflow-hidden border border-gray-700">
+            <iframe
+              title="EndevSystems Lahore Location"
+              src="https://www.google.com/maps?q=208%20Global%20Heights%20Abdul%20Haq%20Road%20Lahore&output=embed"
+              className="w-full h-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </div>

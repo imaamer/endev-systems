@@ -150,9 +150,7 @@ export default function ContactPage() {
             <h2 className="text-2xl font-semibold">Get in touch</h2>
 
             <p className="text-gray-700 leading-relaxed">
-              Discuss your project with us today. Request a quote online or call
-              us at <br />
-              <span className="font-medium">+92 3164100201</span>.
+              Discuss your project with us today. Request a quote online
             </p>
 
             <div className="rounded-xl overflow-hidden shadow">

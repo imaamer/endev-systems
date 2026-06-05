@@ -165,7 +165,6 @@ export default function GetAQuote() {
 
             <div className="mt-10 text-gray-400">
               info@endevsystems.com <br />
-              +92 3164100201
             </div>
           </div>
 

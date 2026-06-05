@@ -61,7 +61,6 @@ export default function Footer() {
               <p>208 Global Heights</p>
               <p>Abdul Haq Road, Opp Exp Center</p>
               <p>Lahore, Pakistan</p>
-              <p className="mt-2"> +92 3291581789</p>
               <p className="text-(--color-brand)">info@endevsystems.com</p>
             </div>
           </div>
